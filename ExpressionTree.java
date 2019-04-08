@@ -10,8 +10,12 @@ public class ExpressionTree{
   /*return the expression as a postfix notation string without parenthesis*/
   /* The sample tree would be: "3 2 10 * +"     */
   public String toStringPostfix(){
-    /*you are to write this method*/
-    return "";
+    if (ifValue()){
+      return getValue() + " ";
+    }
+    else{
+      return getLeft.toStringPostfix() + " " + getRight.toStringPostfix() + " " + getOp();
+    }
   }
 
   /*return the expression as a prefix notation string without parenthesis*/
